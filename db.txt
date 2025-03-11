@@ -1,0 +1,18 @@
+Username:	root
+Password:	usbw
+MySQL port	3306
+
+To work with the database you need:
+1. Establish connection with the DMBS (DataBaseManagementSystem), provide for this address, login and password
+
+PHP code: mysql_connect(address, login, password, name of DB)
+
+2. Make sure the connection is established
+
+3. Make SQL queries
+
+4. Make sure the query is done successfully 
+
+5. Get the result as stream / array ... 
+
+6. Use the result obtained
