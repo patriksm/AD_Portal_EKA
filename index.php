@@ -8,10 +8,21 @@
 </head>
 <body>
     <?php
-        $text = "TEXT";
+        $text = "How let us connect to DataBase";
     ?>
     <div>
         <b>Hello world! <?php echo $text ?></b>
+        <br>
+        <b>
+            <?php
+                $dbcon=mysqli_connect("localhost:3306", "root", "usbw");
+                if($dbcon == false){
+                    print("Connection to DB is not established! " . mysqli_connect_error());
+                } else {
+                    print("Connection Successful!");
+                }
+            ?>
+        </b>
     </div>
 </body>
 </html>
