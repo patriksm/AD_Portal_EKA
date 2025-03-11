@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
+    <?php
+        $text = "TEXT";
+    ?>
     <div>
-        <b>Hello world! here will be a new webpage soon</b>
+        <b>Hello world! <?php echo $text ?></b>
     </div>
 </body>
 </html>
