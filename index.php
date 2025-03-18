@@ -15,11 +15,17 @@
         <br>
         <b>
             <?php
-                $dbcon=mysqli_connect("localhost:3306", "root", "usbw");
+                $dbcon=mysqli_connect("localhost:3306", "root", "usbw", "test1");
                 if($dbcon == false){
                     print("Connection to DB is not established! " . mysqli_connect_error());
                 } else {
                     print("Connection Successful!");
+                    $sql = 'INSERT INTO cities SET name = "Jelgava"';
+                    $result = mysqli_query($dbcon, $sql);
+                    
+                    if($result == false){
+                        print("There is an error with connection to teh database!");
+                    }
                 }
             ?>
         </b>
