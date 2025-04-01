@@ -24,6 +24,8 @@
         $servername = "localhost:3306";
         $username = "root";
         $password = "usbw";
+        $codeset = "utf8mb4_unicode_ci";
+        $charset = "utf8mb4";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password);
@@ -31,9 +33,9 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
+        
         // Create database
-        $sql = "CREATE DATABASE $mytext";
+        $sql = "CREATE DATABASE $mytext CHARACTER SET $charset COLLATE $codeset";
         if ($conn->query($sql) === TRUE) {
             echo "Database $mytext created successfully";
         } else {
