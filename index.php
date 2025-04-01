@@ -35,5 +35,18 @@
             ?>
         </b>
     </div>
+    <div>
+        <p>F O R M</p>
+        <form method="POST">
+            <label>My Message</label>
+            <input type="text" id="my_mes" name="mymes"></input>
+            <input type="submit" id="my_sbmt" name="mysbmt"></input>
+        </form>
+    </div>
+
+    <?php 
+        $mytext = $_POST['mymes'];
+        echo "<p>".$mytext."</p>";
+    ?>
 </body>
 </html>
