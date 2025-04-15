@@ -18,11 +18,13 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        // $res = mysql_query("SHOW DATABASES");
+        $res = mysql_query("SHOW DATABASES");
 
-        // while ($row = mysql_fetch_assoc($res)) {
-        //     echo $row['Database'] . "\n";
-        // }
+        while ($row = mysql_fetch_assoc($res)) {
+             echo $row['Database'] . "\n";
+        }
+
+        $conn->close();
 ?>
 </body>
 </html>

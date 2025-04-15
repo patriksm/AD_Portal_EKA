@@ -42,6 +42,16 @@
             echo "Error creating database: " . $conn->error;
         }
 
+        $sql = "SHOW DATABASES";
+        if ($conn->query($sql) === TRUE) {
+            while ($row = mysql_fetch_assoc($sql)) {
+                echo $row['Database'] . "\n";
+           }
+        } else {
+            echo "\n";
+            echo "Cannot show the databases: " . $conn->error;
+        }
+
         $conn->close();
     ?>
 </body>
