@@ -12,16 +12,18 @@
         $password = "usbw";
 
         // Create connection
-        $conn = new mysqli($servername, $username, $password);
+        // $conn = new mysqli($servername, $username, $password);
         // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        // if ($conn->connect_error) {
+        //     die("Connection failed: " . $conn->connect_error);
+        // }
 
+        // $res = mysql_query("SHOW DATABASES");
+        $conn = mysql_connect($servername, $username, $password);
         $res = mysql_query("SHOW DATABASES");
 
         while ($row = mysql_fetch_assoc($res)) {
-             echo $row['Database'] . "\n";
+             echo $row['Database']."\n";
         }
 
         $conn->close();
